@@ -1,6 +1,6 @@
 # San-Fransisco-Crime-Data-Analysis
 San Francisco city is most known for being a technology hub and a Tourist destination. However, the crime in the city is also increasing at an alarming rate. The aim of our project is to predict top locations and time using category of crime,classify the category of crime that occurred, given the information of time and location . These results would be helpful for SF police to understand the underlying patterns of the crimes  and aids in public safety by alerting the police to target specific locations at specific times. It helps in proper utilization of resources and in alleviating crimes.
-Link for the Project : https://sites.google.com/uncc.edu/sf-crime-classification/home?authuser=2
+Link for the Project : https://sites.google.com/view/sfcda/home
 K means Clustering
 K-means clustering is implemented using pyspark
 source code : Kmeanspro.py 
