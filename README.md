@@ -12,7 +12,7 @@ The latitudes and longitudes are taken as input from the csv file and k=40 no of
 hadoop fs -put Police_Department_Incidents.csv /user/rarva/kmeans/input/ (directory is made)
 
 Kmeanspro.py is run in spark for the input files using the command:
-spark-submit Kmeanspro.py /user/rarva/kmeans/input/*
+- spark-submit Kmeanspro.py /user/rarva/kmeans/input/*
 
 The output is written to folder named Sanfransiscokmeans in the hdfs 
 elbow method is run in python(syder) for the elbow plot
@@ -26,7 +26,7 @@ The input to Naive Bayes are in parts named Crime_Analysis_part_0.csv,Crime_Anal
 input files and Naive_Bayes_Pred.py are moved into  dsba hadoop cluster using winscp
 
 Naive_Bayes_Pred.py is executed in spark with input category  
-spark-submit Naive_Bayes_Pred.py category 
+- spark-submit Naive_Bayes_Pred.py category 
 input paths are already given in the python code.
 
 The Output is obtained with top 10 areas of clusters  and time.
@@ -35,18 +35,18 @@ The Output is obtained with top 10 areas of clusters  and time.
 Merge the Kmeans output with input file to include cluster numbers in the input file for Naive Bayes
 
 Copy the input files to HDFS in dsba clusters
-hadoop fs -put Crime_Analysis_part_0.csv /user/rarva/Naivebayes/input/
-hadoop fs -put /home/cloudera/Crime_Analysis_part_1.csv /user/rarva/Naivebayes/input/
-hadoop fs -put /home/cloudera/Crime_Analysis_part_2.csv /user/rarva/Naivebayes/input/
-hadoop fs -put /home/cloudera/Crime_Analysis_part_3.csv /user/rarva/Naivebayes/input/
+- hadoop fs -put Crime_Analysis_part_0.csv /user/rarva/Naivebayes/input/
+- hadoop fs -put /home/cloudera/Crime_Analysis_part_1.csv /user/rarva/Naivebayes/input/
+- hadoop fs -put /home/cloudera/Crime_Analysis_part_2.csv /user/rarva/Naivebayes/input/
+- hadoop fs -put /home/cloudera/Crime_Analysis_part_3.csv /user/rarva/Naivebayes/input/
 
 Execute the implemented Naive Bayes program by running below command
-spark-submit Naive_Bayes.py --inputFiles
+- spark-submit Naive_Bayes.py --inputFiles
 (Ex: spark-submit Naive_Bayes.py Crime_Analysis_part_0.csv,Crime_Analysis_part_1.csv,Crime_Analysis_part_2.csv,Crime_Analysis_part_3.csv)
 
 The output of actual and predicted labels written to NBClassification folder. Accuracy of prediction is printed on the console.  
 
 Execute the MLlib Naive Bayes program by running below command
-spark-submit Spark_MLlib.py --inputFiles
+- spark-submit Spark_MLlib.py --inputFiles
 (Ex: spark-submit Spark_MLlib.py Crime_Analysis_part_0.csv,Crime_Analysis_part_1.csv,Crime_Analysis_part_2.csv,Crime_Analysis_part_3.csv)
 The accuracy of predicting correct labels on the test split is printed on the console.
